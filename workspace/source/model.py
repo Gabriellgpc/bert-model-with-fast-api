@@ -2,7 +2,7 @@
 # @Author: Luis Condados
 # @Date:   2022-02-07 20:39:25
 # @Last Modified by:   Luis Condados
-# @Last Modified time: 2022-02-07 21:33:10
+# @Last Modified time: 2022-02-07 22:16:19
 
 import os
 
@@ -32,14 +32,14 @@ class ScoringService():
     @classmethod
     def predict(cls, address: str, location: str):
         # Get model
-        model, preprocessor = cls.get_model()
+        # model, preprocessor = cls.get_model()
         
-        # Do the preprocessing
+        # # Do the preprocessing
         # text_preprocessed = preprocessor([np.array([address]), np.array([location])])        
         # model_output = model(text_preprocessed)
         
         # # Run the inference
         # score = tf.argmax(tf.sigmoid(model_output), axis = 0)
-        score = 0.01
+        score = np.random.uniform(0.0, 1.0)
 
         return score

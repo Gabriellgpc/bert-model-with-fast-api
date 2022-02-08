@@ -26,10 +26,10 @@ RUN apt-get update --fix-missing && apt-get install -y \
     wget bzip2 ca-certificates \
     cmake build-essential      \
     pkg-config                 \
-    python-dev                \
-    python-pip                 \
-    python-setuptools          \
-    python-virtualenv          \
+    python3-dev                \
+    python3-pip                 \
+    python3-setuptools          \
+    python3-virtualenv          \
     nginx\
     && \
     apt-get clean && \
@@ -45,10 +45,9 @@ RUN apt-get update --fix-missing && apt-get install -y \
 RUN pip install --upgrade pip
 
 # Install pip packages
-RUN pip --no-cache-dir install  numpy==1.18.5\
+RUN pip --no-cache-dir install  numpy==1.22.2\
                                 idna==3.0\
                                 gunicorn==20.1.0\
-                                boto3==1.18.30\
                                 fastapi==0.70.0\
                                 uvicorn[standard]==0.15.0\
                                 "uvicorn[standard]" gunicorn\

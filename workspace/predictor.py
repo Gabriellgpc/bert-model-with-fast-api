@@ -2,7 +2,7 @@
 # @Author: Luis Condados
 # @Date:   2022-02-07 20:38:20
 # @Last Modified by:   Luis Condados
-# @Last Modified time: 2022-02-07 21:01:01
+# @Last Modified time: 2022-02-07 22:32:37
 # Contact: condadoslgpc@gmail.com
 
 from fastapi import FastAPI, HTTPException
@@ -39,7 +39,7 @@ def ping():
     return 200
 
 @app.post("/predict/", tags=['Model'])
-def user_enrollment(request: RequestTemplate):
+def invocation(request: RequestTemplate):
     
     address = request.address
     location= request.location
