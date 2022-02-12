@@ -1,0 +1,38 @@
+bert-model-with-fast-api
+├── docker-compose.yml
+├── Dockerfile
+├── notebooks
+│   └── inference.ipynb
+├── project_struct.txt
+├── README.md
+├── requirements.txt
+└── workspace
+    ├── assets
+    │   ├── README.md
+    │   ├── saved_model
+    │   │   ├── assets
+    │   │   │   └── vocab.txt
+    │   │   ├── keras_metadata.pb
+    │   │   ├── saved_model.pb
+    │   │   └── variables
+    │   │       ├── variables.data-00000-of-00001
+    │   │       └── variables.index
+    │   └── saved_preprocessor
+    │       ├── assets
+    │       │   └── vocab.txt
+    │       ├── keras_metadata.pb
+    │       ├── saved_model.pb
+    │       └── variables
+    │           ├── variables.data-00000-of-00001
+    │           └── variables.index
+    ├── nginx.conf
+    ├── predictor.py
+    ├── serve
+    ├── source
+    │   ├── base_classes.py
+    │   ├── __init__.py
+    │   └── model.py
+    ├── utils
+    │   ├── __init__.py
+    │   └── set_gpu.py
+    └── wsgi.py
