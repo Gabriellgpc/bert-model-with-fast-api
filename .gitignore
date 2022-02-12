@@ -1,4 +1,5 @@
 etc
 venv
 models
-assets
+saved_model
+saved_preprocessor

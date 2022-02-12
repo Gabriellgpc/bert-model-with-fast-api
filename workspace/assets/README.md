@@ -1,0 +1,1 @@
+Put your model and processor here under this folder. save your saved model in a folder named **saved_model** and the preprocessor in **preprocessor**.

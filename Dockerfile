@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 # @Author: Luis Condados
 # @Date:   2022-02-07 20:39:25
-# @Last Modified by:   Luis Condados
+# @Last Modified by:   Your name
 
 # This is a Python 3 image that uses the nginx, gunicorn, fast api stack
 # for serving inferences in a stable way.
@@ -30,7 +30,7 @@ RUN apt-get update --fix-missing && apt-get install -y \
     python3-pip                 \
     python3-setuptools          \
     python3-virtualenv          \
-    nginx\
+    nginx \
     && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*    

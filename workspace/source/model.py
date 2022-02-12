@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 # @Author: Luis Condados
 # @Date:   2022-02-07 20:39:25
-# @Last Modified by:   Luis Condados
-# @Last Modified time: 2022-02-07 22:16:19
+# @Last Modified by:   Your name
+# @Last Modified time: 2022-02-12 12:36:26
 
 import os
 
@@ -22,10 +22,10 @@ class ScoringService():
     def get_model(cls):
         """Get the model object for this instance, loading it if it's not already loaded."""
         if cls.model is None or cls.processor is None:
-            saved_model_path = os.path.join(assets, '2022_02_07_chinese_sentence_classification_pre_trained_model')
+            saved_model_path = os.path.join(assets, 'saved_model')
             cls.model = tf.saved_model.load(saved_model_path)
             
-            saved_preprocessor_path = os.path.join(assets, '2022_02_07_chinese_sentence_classification_bert_multi_cased_preprocess')
+            saved_preprocessor_path = os.path.join(assets, 'saved_preprocessor')
             cls.preprocessor = tf.saved_model.load(saved_preprocessor_path)
         return cls.model, cls.processor
 
