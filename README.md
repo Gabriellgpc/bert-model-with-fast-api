@@ -58,5 +58,5 @@ bert-model-with-fast-api
     ├── utils
     │   ├── __init__.py
     │   └── set_gpu.py
-    └── wsgi.py
+    └── wsgi.py      #That's just a wrapp program
 ```
