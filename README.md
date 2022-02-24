@@ -5,12 +5,12 @@ Classifier model BERT based.
 # Requirements
 
 You'll have to install docker and docker-compose to run this project more smoothly.
-Officla instructions here:
+Official instructions here:
 - [Docker install](https://docs.docker.com/engine/install/)
 - [Docker-compose install](https://docs.docker.com/compose/install/)
 
 # How to run
-You have to put your trained model whithin `workspace/assets/saved_model` and your **preprocessor** in `workspace/assets/preprocessor`.
+You have to put your trained model whithin `workspace/assets/saved_model` and your **preprocessor** in `workspace/assets/saved_preprocessor`.
 After that just launch the docker-compose:
 
 ```
@@ -60,3 +60,13 @@ bert-model-with-fast-api
     │   └── set_gpu.py
     └── wsgi.py      #That's just a wrapp program
 ```
+
+How to enable the GPU use:
+
+Useful tutorials: 
+- 
+
+- If you do not have the driver of  the GPU installed. Try to use `$nvidia-smi`, if works you already have the driver installed, if not ([a good tutorial](https://linuxconfig.org/how-to-install-the-nvidia-drivers-on-ubuntu-20-04-focal-fossa-linux)):
+    `sudo ubuntu-drivers autoinstall`
+
+- Follow this instruction to install the cuda toolkit: https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/install-guide.html#docker

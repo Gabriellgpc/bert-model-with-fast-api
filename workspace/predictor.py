@@ -2,7 +2,7 @@
 # @Author: Luis Condados
 # @Date:   2022-02-07 20:38:20
 # @Last Modified by:   Luis Condados
-# @Last Modified time: 2022-02-07 22:32:37
+# @Last Modified time: 2022-02-24 00:02:41
 # Contact: condadoslgpc@gmail.com
 
 from fastapi import FastAPI, HTTPException
@@ -45,5 +45,6 @@ def invocation(request: RequestTemplate):
     location= request.location
 
     score = ScoringService.predict(address, location)
-
-    return score
+    response = {"score": score}
+    
+    return response

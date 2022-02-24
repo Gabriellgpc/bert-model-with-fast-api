@@ -1,7 +1,7 @@
 # @Author: Luis Condados
 # @Date:   2022-02-07 21:48:07
 # @Last Modified by:   Luis Condados
-# @Last Modified time: 2022-02-07 22:06:56
+# @Last Modified time: 2022-02-24 00:56:15
 
 version: '3.9'
 
@@ -11,4 +11,11 @@ services:
     build: .
     ports:
       - 8000:8000
+    # deploy:
+    # For more information: https://docs.docker.com/compose/gpu-support/
+      # resources:
+      #   reservations:
+      #     devices:
+      #       - driver: nvidia
+      #         capabilities: [gpu]
     command: serve

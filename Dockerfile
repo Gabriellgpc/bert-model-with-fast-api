@@ -6,7 +6,7 @@
 # This is a Python 3 image that uses the nginx, gunicorn, fast api stack
 # for serving inferences in a stable way.
 
-FROM tensorflow/tensorflow:2.8.0
+FROM tensorflow/tensorflow:2.8.0-gpu
 
 LABEL MAINTAINER Luis Condados condadoslgpc@gmail.com
 
@@ -66,6 +66,4 @@ ENV PATH="/opt/program:${PATH}"
 
 # Set up the program in the image
 COPY ./workspace /opt/program
-COPY ./workspace/source /opt/program/source
-COPY ./workspace/assets /opt/ml/assets
 WORKDIR /opt/program
