@@ -1,13 +1,14 @@
 # -*- coding: utf-8 -*-
 # @Author: Luis Condados
-# @Date:   2022-02-07 20:39:25
-# @Last Modified by:   Your name
-# @Last Modified time: 2022-02-12 12:36:26
+# @Date:   2022-02-09 00:05:47
+# @Last Modified by:   Luis Condados
+# @Last Modified time: 2022-02-23 22:43:19
 
 import os
 
 import numpy as np
 import tensorflow as tf
+import tensorflow_text as text  # Registers the ops.
 
 prefix = "/opt/ml"
 assets = os.path.join(prefix, "assets")
@@ -39,7 +40,7 @@ class ScoringService():
         # model_output = model(text_preprocessed)
         
         # # Run the inference
-        # score = tf.argmax(tf.sigmoid(model_output), axis = 0)
+        # score = tf.sigmoid(model_output)[-1].numpy().astype(np.float64)
         score = np.random.uniform(0.0, 1.0)
 
         return score

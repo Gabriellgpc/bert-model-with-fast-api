@@ -1,14 +1,14 @@
 # -*- coding: utf-8 -*-
 # @Author: Luis Condados
 # @Date:   2022-02-07 20:39:25
-# @Last Modified by:   Your name
+# @Last Modified by:   Luis Condados
 
 # This is a Python 3 image that uses the nginx, gunicorn, fast api stack
 # for serving inferences in a stable way.
 
 FROM tensorflow/tensorflow:2.8.0
 
-LABEL MAINTAINER Luis Condados condados@motorola.com
+LABEL MAINTAINER Luis Condados condadoslgpc@gmail.com
 
 ENV TZ=America/Sao_Paulo
 RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
